@@ -1,1 +1,3 @@
-(executable (name transketch) (libraries yojson))
+(executable (name transketch) (libraries yojson) (modules transketch))
+(executable (name getsketch) (libraries yojson cohttp-lwt-unix) (modules getsketch))
+(executable (name md2ml) (modules md2ml))
