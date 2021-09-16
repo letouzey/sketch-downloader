@@ -26,7 +26,7 @@ let get_sketch_json tok =
   let open Cohttp in
   let open Cohttp_lwt in
   let open Cohttp_lwt_unix in
-  let uri = Uri.of_string "https://api.sketch.sh/graphql" in
+  let uri = Uri.of_string "https://sketch.sh/graphql" in
   let headers = Header.init_with "content-type" "application/json" in
   let graphql_query =
     "query getNoteById($noteId: String!)"^

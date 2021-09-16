@@ -30,7 +30,7 @@ if [ -z $OUT ]; then
     OUT=$TOKEN.json;
 fi
 
-curl -sS 'https://api.sketch.sh/graphql' \
+curl -sS 'https://sketch.sh/graphql' \
      -o $OUT \
      -H 'content-type: application/json' \
      --data-raw '{"operationName":"getNoteById","variables":{"noteId":"'$TOKEN'"},"query":"query getNoteById($noteId: String!) {note: note(where: {id: {_eq: $noteId}}) {id title data}}"}'
